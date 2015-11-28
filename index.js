@@ -65,7 +65,7 @@ relay.on('ready', function () {
         wifi.on('connect', connect);
     }
     //watchdog
-    var resetPin = tessel.port['A'].digital[2]; //G3
+    var resetPin = tessel.port.A.digital[2]; //G3
     var start = new Date().getTime();
     setInterval(function () {
         if (!wifi.isConnected() || (new Date() - start > 4000000)) {
